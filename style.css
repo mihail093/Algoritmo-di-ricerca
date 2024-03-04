@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+p{
+    font-size: 18px;
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.textContainer{
+    padding: 8px 16px;
+}
+.mainText{
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.mainText span{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.message{
+    margin: 6px 4px;
+}
+.message p{
+    margin: 3px 2px;
+}
+ul{
+    padding: 38px 30px;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+input{
+    margin: 4px;
+}
+label{
+    margin: 12px;
+}
+#button{
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+#button:hover{
+    background-color: #45a049;
+}
+.input{
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.input:focus{
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+#divVuoto{
+    display: flex;
+    justify-content: center;
+    color:#033c17;
+    margin-top: 18px;
+}
+#tableContainer{
+    display: flex;
+    justify-content: center;
+    margin: 26px 0 34px 0;
+}
+.tableDisplayNone{
+    display: none
+}
+.risultato, #tdCounter{
+    font-weight: bold;
+    color:crimson;
+}

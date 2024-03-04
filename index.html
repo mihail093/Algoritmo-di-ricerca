@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Career Climb</title>
+</head>
+<body>
+    <!--Creo un div principale all'interno del quale andrò ad inserire altri div-->
+    <div class="textContainer">
+        <!--Creo un div che conterrà il titolo principale e un h3-->
+        <div class="mainText">
+            <span><h1>Career Climb</h1></span>
+            <h3>Trova l'opportunità professionale perfetta con un solo click</h3>
+        </div>
+        <!--Un altro div con due ulteriori div all'interno-->
+        <div>
+            <!--Il div più esterno contiene un paragrafo e un altro div-->
+            <div class="message">
+            <p>Il tuo futuro inizia qui: scopri opportunità lavorative su misura per te</p>
+            <!--Il div più interno lo uso per inserire un altro paragrafo e una lista non ordinata-->
+            <div>
+                <p>Cerca lavori per settore e/o posizione geografica</p>
+                <ul>
+                    <li>È consigliata la ricerca per parole chiave</li>
+                    <li>Scrivi come parola chiave il lavoro che stai cercando</li>
+                    <li>Scrivi come parola chiave lo stato o la regione o la città che stai cercando
+                        (prova a scrivere una sigla come ad esempio: US o NY)</li>
+                </ul>
+            </div>
+            </div> 
+        </div>
+    </div>
+    <!--Creo un tag <form> per l'inserimento dei vari <label> e <input> tags-->
+    <form>
+        <label for="title">Scrivi qui il lavoro che stai cercando</label>
+        <input id="title" class="input" type="text">
+        <label for="location">Scrivi qui la posizione geografica che stai cercando</label>
+        <input id="location" class="input" type="text">
+        <input id="button" type="button" value="cerca">
+    </form>
+    <!--Creo un div con id "divVuoto" dove andrò ad inserire una scritta sfruttando JS;
+        la scritta cambierà da "RISULTATI TROVATI" (se la ricerca produrrà risultati)
+        a "NESSUN RISULTATO TROVATO" in caso contrario-->
+    <div id="divVuoto"></div>
+    <!--Creo un div che conterrà l'intera struttura della tabella-->
+    <div id="tableContainer">
+        <!--Per tutti gli elementi con classe "tableDisplayNone" imposterò la proprità CSS display: none;
+            in JS andrò a rimuovere questa classe quando la ricerca produce risultati-->
+        <table>
+            <thead>
+                <tr>
+                    <!--La classe "tableText" la userò in JS mentre "tableDisplayNone" in CSS-->
+                    <th class="tableText tableDisplayNone">Lavoro</th>
+                    <th class="tableText tableDisplayNone">Posizione geografica</th>
+                </tr>
+            </thead>
+            <!--All'interno del tag <tbody> andrò ad inserire i risultati della ricerca-->
+            <tbody id="tableBody">
+            </tbody>
+            <!--Il tag <tfoot> mi servirà per far apparire la scritta "RISULTATI TOTALI" e il numero di risultati-->
+            <tfoot>
+                <tr id="footRow">
+                    <!--La classe "risultato" all'interno del tag <span> la userò in CSS"-->
+                    <td class="tableText tableDisplayNone"><span class="risultato">RISULTATI TOTALI:</span></td>
+                    <!--Il numero di risultati totali verranno inseriti nel tag <td> con id "tdCounter"-->
+                    <td id="tdCounter"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
